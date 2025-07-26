@@ -4,7 +4,8 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "NimLang.nimlang"
+                "NimLang.nimlang",
+                "formulahendry.code-runner"
             ]
         }
     },

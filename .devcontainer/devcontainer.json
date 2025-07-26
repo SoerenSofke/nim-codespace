@@ -1,8 +1,6 @@
 {
     "name": "Nim Dev Container",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },    
+    "image": "mcr.microsoft.com/devcontainers/universal:latest",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -10,5 +8,8 @@
             ]
         }
     },
-    "postCreateCommand": "nim --version"
+    "containerEnv": {
+        "PATH": "${containerEnv:PATH}:~/.nimble/bin"
+    },
+    "postCreateCommand": "curl https://nim-lang.org/choosenim/init.sh -sSf | sh -s -- -y && curl -L https://github.com/nim-lang/langserver/releases/download/v1.12.0/nimlangserver-linux-amd64.tar.gz | tar -xz -C ~/.nimble/bin"
 }

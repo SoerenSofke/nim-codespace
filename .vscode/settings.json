@@ -2,8 +2,8 @@
     "editor.fontSize": 14,
     "git.confirmSync": false,
     "git.autofetch": true,
-    "code-runner.executorMapByFileExtension": {
-        ".nim": "nph $fullFileName && nim compile --run --hints:off $fullFileName"
+    "code-runner.executorMap": {
+        "nim": "nph $fullFileName && nim compile --verbosity:0 --hints:off --run $fullFileName"
     },
     "code-runner.clearPreviousOutput": false,
     "code-runner.enableAppInsights": false,

@@ -3,7 +3,7 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "code-runner.executorMapByFileExtension": {
-        ".nim": "nim compile --run --hints:off $fullFileName"
+        ".nim": "nph $fullFileName && nim compile --run --hints:off $fullFileName"
     },
     "code-runner.clearPreviousOutput": false,
     "code-runner.enableAppInsights": false,
